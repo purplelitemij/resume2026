@@ -6,9 +6,9 @@ Repo to track resume building in 2026
 
 This README tracks building my resume and portfolio using Hugo
 and GitHub Pages, so anyone reading it can set up their own version — a
-resume site and a portfolio site, each in their own trackable GitHub repo.
+resume and a portfolio site, each in their own trackable GitHub repo.
 
-**Stack used:** Homebrew, Git, GitHub CLI (`gh`), Hugo (extended), Go, VS Code
+**Tool stack used:** Homebrew, Git, GitHub CLI (`gh`), Hugo (extended), Go, VS Code
 **Also installed for broader dev work (not strictly required for this project):** JDK, Python, Claude Desktop
 
 **Two-repo structure:**
@@ -49,10 +49,10 @@ git --version
 ```
 
 ### 1.3 Create a GitHub Account
-1. Go to [github.com/join](https://github.com/join)
-2. Sign up with an email, username, and password (this username is what will
-   appear in your URLs, e.g. `github.com/yourusername`)
-3. Verify your email address
+1. Go to [github.com/join](https://github.com/join).
+2. Sign up with an email, username, and password. Note that this username is what will
+   appear in your URLs, e.g. `github.com/yourusername`, so use one that you can remember.
+3. Verify your email address.
 
 ### 1.4 Configure Git with Your Identity
 ```bash
@@ -74,11 +74,11 @@ gh --version
 gh auth login
 ```
 You'll be asked:
-- `GitHub.com` → select it
-- Protocol: **HTTPS** (simplest for beginners)
+- Select `GitHub.com`
+- Protocol: **HTTPS** 
 - Authenticate with your GitHub credentials: **Login with a web browser**
   (it'll give you a one-time code, open a browser tab, paste the code, and
-  approve)
+  approve).
 
 Verify you're logged in:
 ```bash
@@ -93,11 +93,10 @@ from Markdown + themes into a fast HTML site.
 brew install hugo
 hugo version
 ```
-Confirm the output says `extended` — some Hugo themes require this.
+Confirm the output says `extended` as some Hugo themes require this.
 
 ### 1.7 Install Go
-Hugo's extended features (like Sass/SCSS processing in certain themes) rely
-on Go under the hood.
+Hugo's extended features rely on Go under the hood.
 
 ```bash
 brew install go
