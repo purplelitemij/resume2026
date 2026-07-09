@@ -2,7 +2,7 @@
 Repo to track resume building in 2026
 
 
-# Building a Resume & Portfolio Site (Hugo + GitHub Pages)
+## Building a Resume & Portfolio Site (Hugo + GitHub Pages)
 
 This README tracks building my resume and portfolio using Hugo
 and GitHub Pages, so anyone reading it can set up their own version — a
