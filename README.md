@@ -15,7 +15,7 @@ resume and a portfolio site, each in their own trackable GitHub repo.
 | Repo | Purpose | Hosted at | Sample|
 |---|---|---|---|
 | `<username>.github.io` | Portfolio (the primary link you'll share) | `https://<username>.github.io` | purplelitemij.github.io|
-| `resume` | Resume (Hugo-generated page/PDF) | `https://<username>.github.io/resume` | purplelitemij/resume|
+| `resume` | Resume (Hugo-generated page/PDF) | `https://<username>.github.io/resume2026` | purplelitemij/resume2026|
 
 ---
 
@@ -107,10 +107,12 @@ go version
 ```bash
 brew install --cask visual-studio-code
 ```
+<!--
 Recommended extensions once installed (Extensions panel, Cmd+Shift+X):
 - **Hugo Language and Syntax Support**
 - **Front Matter CMS** (optional, nice UI for editing Hugo content)
 - **GitLens** (visualize Git history/blame inline)
+-->
 
 ### 1.9 (Optional) JDK & Python
 Not required for the Hugo/GitHub workflow itself, but useful for other scripting or tooling tasks you may layer on later:
@@ -122,6 +124,8 @@ brew install python
 ### 1.10 (Optional) Claude Desktop
 Used for drafting content, troubleshooting, and general project documentation. Download from [claude.ai/download](https://claude.ai/download).
 
+I have used this to help create my resume using a Hugo theme as a starting point. I have also linked Claude Code to VS Code giving me the ability to tweak content directly.
+
 ### 1.11 Verify Everything
 ```bash
 brew --version
@@ -132,40 +136,46 @@ hugo version
 go version
 code --version
 ```
-If each command returns a version number (and `gh auth status` shows you're
-logged in), you're ready for the next section.
+If each command returns a version number (and `gh auth status`), that shows that you're logged in and ready for the next section.
 
 ---
 
 ## 2. Next Steps: Creating the GitHub Repos
 
-We're creating **two repos**: one for the portfolio (the special GitHub
-Pages user-site repo), one for the resume (a normal project repo also
-published via GitHub Pages).
+We're creating **two repos**: one for the portfolio (the special GitHub Pages user-site repo), one for the resume (a normal project repo also published via GitHub Pages).
 
 ### 2.1 Create the Portfolio Repo
-This repo's name is **not arbitrary** — GitHub treats a repo named exactly
-`<your-username>.github.io` as your personal site, served at the root domain
-`https://<your-username>.github.io` with no extra setup needed for the URL.
+This repo's name is **not arbitrary** — GitHub treats a repo named exactly `<your-username>.github.io` as your personal site, served at the root domain `https://<your-username>.github.io` with no extra setup needed for the URL.
 
 ```bash
-gh repo create <your-username>.github.io --public --clone
+gh repo create <purplelitemij>.github.io --public --clone
 cd <your-username>.github.io
 ```
-
+<!--
 - `--public` — required for free GitHub Pages hosting on a personal account
 - `--clone` — creates the repo on GitHub *and* clones it to your machine in
   one step, landing you in a new local folder
+-->
 
 ### 2.2 Create the Resume Repo
-This one can be named anything — `resume` keeps it simple and gives a clean
-URL (`https://<your-username>.github.io/resume`).
+This one can be named anything — `resume2026` keeps it simple and gives a clean
+URL (`https://<purplelitemij>.github.io/resume2026`).
 
 ```bash
 cd ..    # back out of the portfolio folder first
 gh repo create resume --public --clone
-cd resume
+cd resume2026
 ```
+
+### Create the repo on GitHub
+I created a repository on github.com
+ - Selected a Repository name (resume2026)
+ - Added a description for the added repository
+ - Selected visibility > **Public**
+ - Selected Add.gitignore > **No.gitignore**
+ - Selected Add licensce > **No licensce**
+ - Clicked **Create repository**
+  This created the https://github.com/purplelitemij/resume2026 site.
 
 ### 2.3 Confirm Both Repos Exist
 ```bash
@@ -174,16 +184,23 @@ gh repo list <your-username>
 You should see both `<your-username>.github.io` and `resume` listed.
 
 ### 2.4 Starter Commit (so each repo isn't empty)
-Do this in **each** repo folder:
+I used Claude to add, commit, and push my changes to the files added (README and index.html).
+I added the template link to my `index.html` to mimic a resume style, added my profile picture to the file structure, and edited the `README` using Claude prompts along the way. 
+Next I uploaded my resume (.docx format) and had Claude plug the contents into the chosen template.
+This rendered my resume in the template. I tweaked the resume specifiic to my chosen style and committed/pushed it using Claude prompts.
+
+You can also commit and push using:
+
 ```bash
-echo "# My Portfolio" > README.md   # (or "# My Resume" in the resume repo)
-git add README.md
-git commit -m "Initial commit"
-git push
+git add index.html
+git commit -m "Add resume site"
+git push origin main
 ```
 
-At this point you have two empty-but-tracked repos on GitHub, both cloned
-locally, both authenticated via `gh` — ready for Hugo to be scaffolded into
-them.
+### 2.4 View GitHub Pages
+
+Navigate to Github.com > **Settings > Pages** > Change source to deploy from the **`main`** branch, root folder (**`/`**).
+
+GitHub Pages builds and publishes automatically since the page is already plain HTML. The changes will be published live in a few minutes at **https://purplelitemij.github.io/resume-2026/**
 
 ---
