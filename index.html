@@ -49,56 +49,6 @@
     border-radius:4px;
   }
 
-  /* ---------- TOP BAR ---------- */
-  .topbar{
-    position:sticky; top:0; z-index:50;
-    display:flex; align-items:center; gap:24px;
-    padding:14px 28px;
-    background:rgba(251,250,253,0.9);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  .brand{
-    font-family:var(--display);
-    font-weight:700;
-    font-size:1.05rem;
-    color:var(--violet-900);
-    display:flex; align-items:center; gap:8px;
-    white-space:nowrap;
-  }
-  .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);display:inline-block;}
-  .topnav{display:flex; gap:20px; flex:1; overflow-x:auto;}
-  .topnav a{
-    font-family:var(--mono);
-    font-size:0.82rem;
-    color:var(--violet-900);
-    text-decoration:none;
-    white-space:nowrap;
-    padding:6px 4px;
-    border-bottom:2px solid transparent;
-    transition:border-color .15s ease, color .15s ease;
-  }
-  .topnav a:hover{border-color:var(--violet-500);}
-  .searchbox{
-    display:flex; align-items:center; gap:6px;
-    background:var(--lavender-100);
-    border:1px solid var(--line);
-    border-radius:8px;
-    padding:6px 10px;
-    min-width:170px;
-  }
-  .searchbox input{
-    border:none; background:transparent; outline:none;
-    font-family:var(--mono); font-size:0.78rem; color:var(--ink);
-    width:100%;
-  }
-  .searchbox svg{flex-shrink:0; opacity:.55;}
-  .version-badge{
-    font-family:var(--mono); font-size:0.72rem;
-    background:var(--violet-900); color:var(--white);
-    padding:4px 9px; border-radius:6px; white-space:nowrap;
-  }
-
   /* ---------- LAYOUT ---------- */
   .layout{
     display:grid;
@@ -441,13 +391,17 @@
           <li><span class="commit-tag tag-feat">feature</span> Adopted AI-assisted authoring tools to improve content clarity and scale knowledge production.</li>
           <li><span class="commit-tag tag-fix">fix</span> Independently troubleshot and maintained uptime of deployment pipelines to ensure successful docs-as-code releases.</li>
         </ul>
-        <div class="entry-stats">
-          <span class="mini-stat"><strong>791</strong> code reviews</span>
-          <span class="mini-stat"><strong>292</strong> commits</span>
-          <span class="mini-stat"><strong>182</strong> merged PRs</span>
-          <span class="mini-stat"><strong>358</strong> jiras completed</span>
-        </div>
+        div class="hero-dashboard" id="summary">
+      <div class="hero-top">
+        <span class="hero-label">// impact_metrics</span>
       </div>
+      <div class="stat-row">
+        <div class="stat"><div class="num"><span class="count" data-target="791">0</span><span class="suffix">+</span></div><div class="lbl">code reviews</div></div>
+        <div class="stat"><div class="num"><span class="count" data-target="292">0</span><span class="suffix">+</span></div><div class="lbl">code commits</div></div>
+        <div class="stat"><div class="num"><span class="count" data-target="182">0</span><span class="suffix">+/yr</span></div><div class="lbl">merged PRs</div></div>
+        <div class="stat"><div class="num"><span class="count" data-target="358">0</span><span class="suffix">+</span></div><div class="lbl">jiras completed</div></div>
+      </div>
+    </div>
 
       <div class="entry">
         <div class="entry-head">
