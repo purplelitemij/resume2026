@@ -151,6 +151,15 @@
   .stat .num .suffix{color:var(--gold);}
   .stat .lbl{font-family:var(--mono); font-size:0.68rem; color:#D9CBF2; margin-top:4px; text-transform:uppercase; letter-spacing:.04em;}
 
+  .hero-dashboard--chip{background:var(--lavender-100); color:var(--violet-900); padding:14px 18px; margin-bottom:28px;}
+  .hero-dashboard--chip::after{display:none;}
+  .hero-dashboard--chip .hero-label{color:var(--violet-500);}
+  .hero-dashboard--chip .stat-row{display:flex; flex-wrap:wrap; gap:8px;}
+  .hero-dashboard--chip .stat{background:var(--line); border:1px solid var(--violet-500); border-radius:999px; padding:5px 12px; display:flex; align-items:baseline; gap:5px;}
+  .hero-dashboard--chip .stat .num{font-family:var(--mono); font-size:0.8rem; font-weight:700; color:var(--violet-900);}
+  .hero-dashboard--chip .stat .num .suffix{color:var(--violet-600);}
+  .hero-dashboard--chip .stat .lbl{font-family:var(--mono); font-size:0.68rem; color:var(--violet-700); margin-top:0; text-transform:none; letter-spacing:0;}
+
   section{margin-bottom:56px; scroll-margin-top:80px;}
   .section-head{display:flex; align-items:baseline; gap:12px; margin-bottom:20px;}
   .section-head h2{font-family:var(--display); font-size:1.5rem; color:var(--violet-900); font-weight:700;}
@@ -344,13 +353,13 @@
 
     <div class="hero-dashboard" id="summary">
       <div class="hero-top">
-        <span class="hero-label">// impact_metrics</span>
+        <span class="hero-label">// content_metrics</span>
       </div>
       <div class="stat-row">
-        <div class="stat"><div class="num"><span class="count" data-target="791">0</span><span class="suffix">+</span></div><div class="lbl">code reviews</div></div>
-        <div class="stat"><div class="num"><span class="count" data-target="292">0</span><span class="suffix">+</span></div><div class="lbl">code commits</div></div>
-        <div class="stat"><div class="num"><span class="count" data-target="182">0</span><span class="suffix">+/yr</span></div><div class="lbl">merged PRs</div></div>
-        <div class="stat"><div class="num"><span class="count" data-target="358">0</span><span class="suffix">+</span></div><div class="lbl">jiras completed</div></div>
+        <div class="stat"><div class="num"><span class="count" data-target="795">0</span><span class="suffix">+</span></div><div class="lbl">code reviews</div></div>
+        <div class="stat"><div class="num"><span class="count" data-target="295">0</span><span class="suffix">+</span></div><div class="lbl">code commits</div></div>
+        <div class="stat"><div class="num"><span class="count" data-target="185">0</span><span class="suffix">+/yr</span></div><div class="lbl">merged PRs</div></div>
+        <div class="stat"><div class="num"><span class="count" data-target="360">0</span><span class="suffix">+</span></div><div class="lbl">jiras completed</div></div>
       </div>
     </div>
 
@@ -393,15 +402,15 @@
         </ul>
       </div>
 
-      <div class="hero-dashboard" id="jpmorgan-metrics">
+      <div class="hero-dashboard hero-dashboard--chip" id="jpmorgan-metrics">
         <div class="hero-top">
-          <span class="hero-label">// impact_metrics</span>
+          <span class="hero-label">// dev content impact</span>
         </div>
         <div class="stat-row">
           <div class="stat"><div class="num"><span class="count" data-target="95">0</span><span class="suffix">+</span></div><div class="lbl">tickets resolved</div></div>
-          <div class="stat"><div class="num"><span class="count" data-target="35000">0</span><span class="suffix">+</span></div><div class="lbl">users engaged</div></div>
-          <div class="stat"><div class="num"><span class="count" data-target="1500">0</span><span class="suffix">+/yr</span></div><div class="lbl">content pieces shipped</div></div>
-          <div class="stat"><div class="num"><span class="count" data-target="20">0</span><span class="suffix">+</span></div><div class="lbl">teams supported</div></div>
+          <div class="stat"><div class="num"><span class="count" data-target="35000">0</span><span class="suffix">+</span></div><div class="lbl">developers engaged</div></div>
+          <div class="stat"><div class="num"><span class="count" data-target="1500">0</span><span class="suffix">+/yr</span></div><div class="lbl">content pages</div></div>
+          <div class="stat"><div class="num"><span class="count" data-target="20">0</span><span class="suffix">+</span></div><div class="lbl">dev teams supported</div></div>
         </div>
       </div>
 
