@@ -290,6 +290,37 @@
     .topnav{display:none;}
     main{padding:28px 20px 60px;}
   }
+
+  /* ---------- PRINT ---------- */
+  @media print{
+    @page{margin:0.5in;}
+    body{font-size:10.5pt; background:var(--white); color:#000;}
+    .layout{display:block; max-width:none;}
+    .sidebar{
+      position:static; height:auto; overflow:visible; border-right:none; border-bottom:1px solid #000;
+      padding:0 0 14px; margin-bottom:16px; display:flex; flex-wrap:wrap; align-items:center; gap:4px 18px;
+    }
+    .avatar, .status-pill, .side-block-title, .toc, .tagcloud{display:none;}
+    .name{font-size:1.15rem;}
+    .role{margin-top:0;}
+    .side-contact{margin-top:0; display:flex; flex-wrap:wrap; gap:2px 16px; width:100%;}
+    .side-contact li{margin-bottom:0;}
+    #resumePdfItem{display:none;}
+    main{padding:0;}
+    .hero-dashboard{display:none;}
+    section{margin-bottom:20px;}
+    .entry{border:1px solid #ccc; box-shadow:none; page-break-inside:avoid; break-inside:avoid;}
+    .entry:hover{box-shadow:none; transform:none;}
+    .commit-tag{display:none;}
+    details.archive{border:1px solid #ccc;}
+    details.archive:not([open]) summary::after{content:" (see online version for full history)";}
+    a{color:#000; text-decoration:underline;}
+    .cursor{display:none;}
+    footer{background:none; color:#000; padding:16px 0 0; margin-top:20px; border-top:1px solid #000;}
+    .terminal{background:none; border:none; padding:0; color:#000;}
+    .terminal .prompt, .terminal .out{color:#000;}
+    .footer-note{color:#333;}
+  }
 </style>
 </head>
 <body>
@@ -315,7 +346,7 @@
       <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Fremont, CA</li>
       <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M8 9h4v2a4 4 0 0 1 8 0v9h-4v-8a2 2 0 0 0-4 0v8H8z"/></svg> <a href="https://www.linkedin.com/in/indirajambulingam/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
       <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="#" title="https://purplelitemij.github.io/resume2026">Resume repo (GitHub) ↗</a></li>
-      <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> <button type="button" class="print-btn" onclick="window.print()">Print résumé</button></li>
+      <li id="resumePdfItem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> <a href="resume.pdf" target="_blank" rel="noopener" class="print-btn">Download résumé (PDF)</a></li>
     </ul>
 
     <div class="side-block-title">on this page</div>

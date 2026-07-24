@@ -1,0 +1,10 @@
+{
+  "name": "resume2026",
+  "private": true,
+  "scripts": {
+    "pdf": "node generate-pdf.js"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^23.0.0"
+  }
+}

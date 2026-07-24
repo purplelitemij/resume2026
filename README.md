@@ -197,7 +197,28 @@ git commit -m "Add resume site"
 git push origin main
 ```
 
-### 2.4 View GitHub Pages
+### 2.5 Keeping the "Download résumé (PDF)" button up to date
+
+The sidebar's résumé button links to a real PDF file (`resume.pdf`), not the browser's
+print-to-PDF of the live page — that avoids print dialogs, headers/footers, and page
+grids showing up in what visitors download.
+
+`resume.pdf` is generated from `index.html` via headless Chrome (`generate-pdf.js`), so
+whenever you edit `index.html`, regenerate it:
+
+```bash
+npm install   # one-time, installs puppeteer-core (needs Google Chrome installed locally)
+npm run pdf   # regenerates resume.pdf from the current index.html
+git add index.html resume.pdf
+git commit -m "Update resume content"
+git push origin main
+```
+
+The `@media print` block in `index.html`'s `<style>` controls what the PDF looks like
+(hides the sidebar nav/animations, keeps entries from splitting across pages, etc.) —
+edit it if you want the PDF layout to change.
+
+### 2.6 View GitHub Pages
 
 Navigate to Github.com > **Settings > Pages** > Change source to deploy from the **`main`** branch, root folder (**`/`**).
 
