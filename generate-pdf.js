@@ -33,6 +33,12 @@ function findChrome() {
     });
   });
 
+  // Chrome doesn't auto-expand collapsed <details> when printing, so force the
+  // archived-experience section open or it silently drops out of the PDF
+  await page.evaluate(() => {
+    document.querySelectorAll('details.archive').forEach((d) => d.setAttribute('open', ''));
+  });
+
   await page.pdf({
     path: path.resolve(__dirname, 'resume.pdf'),
     format: 'Letter',

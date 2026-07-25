@@ -309,17 +309,19 @@
     main{padding:0;}
     .hero-dashboard{display:none;}
     section{margin-bottom:20px;}
-    .entry{border:1px solid #ccc; box-shadow:none; page-break-inside:avoid; break-inside:avoid;}
+    .entry{border:none; box-shadow:none; padding:0 0 14px; page-break-inside:avoid; break-inside:avoid;}
     .entry:hover{box-shadow:none; transform:none;}
     .commit-tag{display:none;}
-    details.archive{border:1px solid #ccc;}
+    .skill-badges{display:block;}
+    .badge{
+      display:list-item; list-style-type:disc; list-style-position:inside;
+      background:none; border:none; border-radius:0; padding:2px 0; margin:0; font-size:0.85rem;
+    }
+    details.archive{border:none; padding:0; background:none;}
     details.archive:not([open]) summary::after{content:" (see online version for full history)";}
     a{color:#000; text-decoration:underline;}
     .cursor{display:none;}
-    footer{background:none; color:#000; padding:16px 0 0; margin-top:20px; border-top:1px solid #000;}
-    .terminal{background:none; border:none; padding:0; color:#000;}
-    .terminal .prompt, .terminal .out{color:#000;}
-    .footer-note{color:#333;}
+    footer{display:none;}
   }
 </style>
 </head>
@@ -412,7 +414,7 @@
           <li><span class="commit-tag tag-docs">docs</span> Designed and developed comprehensive product documentation, including conceptual overviews, step-by-step guides, API reference materials, and interactive tutorials for developer audiences.</li>
           <li><span class="commit-tag tag-docs">docs</span> Authored and maintained a shared style guide and information architecture to unify content voice and structure across a multi-contributor documentation environment.</li>
           <li><span class="commit-tag tag-feat">feature</span> Led the content migration of legacy documentation into a unified, governed documentation portal (Hugo static site), building a tracking framework to measure migration scope, cross-references, and effort across the JPMC enterprise platform'sproduct line.</li>
-          <li><span class="commit-tag tag-feat">feature</span> Created, operated, and maintained doc repositories for the entire product line of 20+ SDLC tools (guides ranging from concepts, developer, onboarding, installation, migrations, troubleshooting and reference materials - code samples, schema, configurations, APIs).</li>
+          <li><span class="commit-tag tag-feat">feature</span> Created, operated, and maintained doc repositories for the entire product line of 20+ SDLC tools (guides ranging from concepts, developer, onboarding, installation, migrations, troubleshooting and reference materials - code samples, schema, 1configurations, APIs).</li>
           <li><span class="commit-tag tag-feat">feature</span> Reduced content inaccuracies by incorporating a customer feedback mechanism to track and mitigate all queries across the platform.<li>
           <li><span class="commit-tag tag-feat">feature</span> Improved SEO across the enterprise platform by using Adobe Analytics metrics to surface search and discoverability gaps.</li>
           <li><span class="commit-tag tag-feat">feature</span> Analyzed and implemented customer feedback to continuously improve content effectiveness.</li>
