@@ -309,7 +309,12 @@
     main{padding:0;}
     .hero-dashboard{display:none;}
     section{margin-bottom:20px;}
-    .entry{border:none; box-shadow:none; padding:0 0 14px; page-break-inside:avoid; break-inside:avoid;}
+    h2, h3, .section-head, .entry-head, .entry-company, .entry-loc, details.archive summary{
+      page-break-after:avoid; break-after:avoid;
+    }
+    #summary-section{page-break-after:always; break-after:page;}
+    .readme{background:none; border:none; padding:0;}
+    .entry{border:none; box-shadow:none; padding:0 0 14px;}
     .entry:hover{box-shadow:none; transform:none;}
     .commit-tag{display:none;}
     .skill-badges{display:block;}
@@ -317,8 +322,14 @@
       display:list-item; list-style-type:disc; list-style-position:inside;
       background:none; border:none; border-radius:0; padding:2px 0; margin:0; font-size:0.85rem;
     }
+    .skill-group{border:none; background:none; border-radius:0; padding:0; page-break-inside:avoid; break-inside:avoid;}
     details.archive{border:none; padding:0; background:none;}
     details.archive:not([open]) summary::after{content:" (see online version for full history)";}
+    .quest-card{
+      background:none; color:#000; border-radius:0; padding:0; page-break-inside:avoid; break-inside:avoid;
+    }
+    .quest-card p{color:#333;}
+    .quest-card .since{color:#555;}
     a{color:#000; text-decoration:underline;}
     .cursor{display:none;}
     footer{display:none;}
@@ -384,7 +395,7 @@
       </div>
     </div>
 
-    <section aria-labelledby="summary-h">
+    <section id="summary-section" aria-labelledby="summary-h">
       <div class="section-head"><h2 id="summary-h">Summary</h2><span class="path"></span></div>
       <div class="readme">
         <p> 15+ years of experience designing and scaling documentation systems. Accomplished documentation specialist who reflects technical concepts in an user-centric style, specializing in building scalable content systems, information architecture, and documentation frameworks that improve developer experience, content usability, and product adoption. Excellent planning and problem-solving skills, with a deep understanding of SEO and analytics.</p>
