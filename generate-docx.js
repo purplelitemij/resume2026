@@ -113,11 +113,9 @@ const doc = new Document({
         // ---- Summary ----
         sectionHeading('Summary'),
         bodyParagraph(
-          '15+ years of experience designing and scaling documentation systems. Accomplished documentation specialist who reflects technical concepts in a user-centric style, specializing in building scalable content systems, information architecture, and documentation frameworks that improve developer experience, content usability, and product adoption. Excellent planning and problem-solving skills, with a deep understanding of SEO and analytics.'
+          ' 15+ years building and scaling documentation systems that turn technical complexity into clear, user-centric storytelling. Proven track record leading enterprise documentation strategy, consolidating content into unified developer repositories, and defining KPIs that tie documentation to product adoption. Uses AI tools, including Claude Code, to modernize content workflows—from planning to customer issue triage.'
         ),
-        bodyParagraph(
-          'Experienced in leading enterprise documentation strategy and operations, consolidating documentation into unified developer repositories, building scalable documentation standards and templates, and reducing documentation-driven support demand through measurable feedback loops and continuous improvement. My work has focused on partnering closely with Product and Engineering to deliver clear, scalable, and user-centric documentation while improving operational efficiency through tooling and process enhancements. Experience includes applying AI-native tools such as Claude Code to operationalize agentic content workflows for content planning, customer issue triage, and documentation generation. Experienced in leading content strategy, defining documentation KPIs, and partnering with engineering, product, and UX teams to align documentation with product direction and customer needs. Strong background in API documentation, developer guides, and large-scale technical content systems supporting complex cloud and enterprise software.'
-        ),
+        
 
         // ---- Experience ----
         sectionHeading('Experience'),
@@ -142,7 +140,7 @@ const doc = new Document({
         bullet('Analyzed and implemented customer feedback to continuously improve content effectiveness.'),
         bullet('Built a structured stakeholder communications process to keep knowledge content aligned with upcoming product and platform changes.'),
         bullet('Improved content and workflow clarity, scaled knowledge production, and reduced time spent on documentation tasks by adopting AI-assisted authoring tools.'),
-        bullet('Impact: 95+ support tickets resolved, 35,000+ developers engaged, 1,500+ content pages published per year, across 20+ engineering teams supported.'),
+        
 
         jobHeader('Content Strategist', 'Roku Inc. (Contract)', 'Jan 2020 – May 2021'),
         jobLocation('San Jose, CA'),
