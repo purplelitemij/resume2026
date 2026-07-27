@@ -2,9 +2,11 @@
   "name": "resume2026",
   "private": true,
   "scripts": {
-    "pdf": "node generate-pdf.js"
+    "pdf": "node generate-pdf.js",
+    "docx": "node generate-docx.js"
   },
   "devDependencies": {
+    "docx": "^9.7.1",
     "puppeteer-core": "^23.0.0"
   }
 }

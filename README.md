@@ -218,7 +218,23 @@ The `@media print` block in `index.html`'s `<style>` controls what the PDF looks
 (hides the sidebar nav/animations, keeps entries from splitting across pages, etc.) —
 edit it if you want the PDF layout to change.
 
-### 2.6 View GitHub Pages
+### 2.6 Generating a Word (.docx) resume
+
+`resume.docx` is a plain, traditional Word resume for sharing directly with recruiters —
+no site styling, no colors, no "commit tag" labels on each bullet, just standard resume
+formatting (Calibri, bold section headings, real bullet lists). It's built from scratch
+in `generate-docx.js` (using the `docx` npm package), not converted from `index.html`, so
+if you update your experience/skills/education, update both files and regenerate:
+
+```bash
+npm install    # one-time, installs the docx package
+npm run docx   # regenerates resume.docx
+git add generate-docx.js resume.docx
+git commit -m "Update resume content"
+git push origin main
+```
+
+### 2.7 View GitHub Pages
 
 Navigate to Github.com > **Settings > Pages** > Change source to deploy from the **`main`** branch, root folder (**`/`**).
 
