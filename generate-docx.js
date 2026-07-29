@@ -120,7 +120,7 @@ const doc = new Document({
         // ---- Experience ----
         sectionHeading('Experience'),
 
-        jobHeader('Content Designer', 'JPMorgan Chase', 'June 2021 – Present'),
+        jobHeader('Content Designer', 'JPMorganChase', 'June 2021 – Present'),
         jobLocation('Palo Alto, CA'),
         bullet('Owned developer documentation and communications for the JPMC enterprise platform, treating it as a product.'),
         bullet('Project managed documentation across 20+ SDLC tools using Jira Service Management.'),
